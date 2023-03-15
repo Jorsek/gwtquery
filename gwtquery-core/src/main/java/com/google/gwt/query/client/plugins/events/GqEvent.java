@@ -69,11 +69,6 @@ public class GqEvent extends Event {
 
   public final native void setCurrentElementTarget(Element e) /*-{
     this.currentTarget = e;
-
-    // ie don't have a currentEventTarget field on event
-    try{
-      @com.google.gwt.dom.client.DOMImplTrident::currentEventTarget = e;
-    }catch(e){}
   }-*/;
 
   /**

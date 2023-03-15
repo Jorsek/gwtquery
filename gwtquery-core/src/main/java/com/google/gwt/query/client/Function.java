@@ -425,6 +425,20 @@ public abstract class Function {
   }
 
   /**
+   * Does this fix the issue with gwt????????????????????
+   * 
+   * Override this method for bound event handlers if you wish to deal with
+   * per-handler user data.
+   *
+   * @return boolean false means stop propagation and prevent default
+   */
+  public boolean f(Event e, Object arg) {
+    setArguments(arg);
+    setEvent(e);
+    return f(e);
+  }
+  
+  /**
    * Override this method for bound event handlers if you wish to deal with
    * per-handler user data.
    *
